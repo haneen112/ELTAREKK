@@ -1,0 +1,160 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Open Sans", sans-serif;
+    background: linear-gradient(black,red);
+    height: 150vh;
+}
+.header{
+    
+    width: 100%;
+    height: 5em;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  0 3rem;
+    color: white;
+    cursor: pointer;
+}
+.header img{
+    max-width: 15em;
+}
+       
+.hamburger{
+    display: none;
+}
+.navbar ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul li a{
+    color:white;
+    text-decoration: none;
+    margin: 0 2em;
+    border-radius: 2em;
+    padding: 2em;
+}
+
+
+@media (max-width: 768px) {
+   
+    header{
+        padding: 0 2rem;
+        position: relative;
+    }
+    .hamburger{
+        display: block;
+        cursor: pointer;
+        font-size: 25px;
+        width: 45px;
+        height: 45px;
+        position: relative;
+    }
+    .hamburger i{
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        width: max-content;
+        height: max-content;
+        opacity: 0;
+        transition: 0.3s ease;
+    }
+    .hamburger i.active{
+        opacity: 1;
+        transform: rotate(180deg);
+
+    }
+    .navbar{
+        position: absolute;
+        background-color: black;
+        top: 5em;
+        width: 100%;
+        left: 0;
+        transition: 0.3s ease;
+        text-align: center;
+        opacity: 0;
+    }
+    .navbar.active{
+        opacity: 1;
+        visibility: visible;
+        z-index: 100;
+
+    }
+
+    .navbar ul{
+        display: block;
+    }
+    .navbar ul li {
+        margin: 1em 0;
+        border-bottom: 1px solid #a4a4a4;
+        padding-bottom: 1em ;
+        z-index: 100;
+    }
+    .navbar ul li:last-child{
+        border-bottom: none;
+    }
+    .navbar ul li a {
+        margin: 0;
+    }
+  
+}
+.main{
+    position: relative;
+    height: 50vh;
+    width: 100%;
+   display: flex;
+   justify-content: center;
+   overflow: hidden;
+  
+}
+.main::after{
+    content:"" ;
+    position: absolute;
+    bottom: 0;
+    height: 10em;
+    width: 100%;
+    background: linear-gradient(to top,black,red,transparent);
+}
+.main img{
+    position: absolute;
+    width: 100%;
+}
+#motor{
+    width: 50%;
+    transform: translateY(90px);
+
+}
+#moon{
+    mix-blend-mode: screen;    
+}
+#mountains{
+    transform: translateY(-70px);
+
+
+}
+
+.eltarekk{
+color: whitesmoke;
+    font-size: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100px);
+}
+
+
+
+
+
+
+
+
